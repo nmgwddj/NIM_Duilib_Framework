@@ -29,6 +29,8 @@ DWORD GlobalManager::m_dwDefaultLinkFontColor = 0xFF0000FF;
 DWORD GlobalManager::m_dwDefaultLinkHoverFontColor = 0xFFD3215F;
 DWORD GlobalManager::m_dwDefaultSelectedBkColor = 0xFFBAE4FF;
 
+bool GlobalManager::m_bAutomationEnabled = false;
+
 std::unique_ptr<IRenderFactory> GlobalManager::m_renderFactory;
 DWORD GlobalManager::m_dwUiThreadId = 0;
 
@@ -83,6 +85,16 @@ void GlobalManager::Shutdown()
 	m_renderFactory.reset();
 	RemoveAllFonts();
 	Gdiplus::GdiplusShutdown(g_gdiplusToken);
+}
+
+void GlobalManager::EnableAutomation(bool bEnabled)
+{
+	m_bAutomationEnabled = bEnabled;
+}
+
+bool GlobalManager::IsAutomationEnabled()
+{
+	return m_bAutomationEnabled;
 }
 
 std::wstring GlobalManager::GetCurrentPath()
@@ -336,7 +348,8 @@ void GlobalManager::RemoveAllImages()
 	m_mImageHash.clear();
 }
 
-HFONT GlobalManager::AddFont(const std::wstring& strFontId, const std::wstring& strFontName, int nSize, bool bBold, bool bUnderline, bool bStrikeout, bool bItalic, bool bDefault)
+HFONT GlobalManager::AddFont(const std::wstring& strFontId, const std::wstring& strFontName, 
+	int nSize, bool bBold, bool bUnderline, bool bStrikeout, bool bItalic, bool bDefault, int nWeight)
 {
 	std::wstring strNewFontId = strFontId;
 	if (strNewFontId.empty())
@@ -362,6 +375,7 @@ HFONT GlobalManager::AddFont(const std::wstring& strFontId, const std::wstring& 
 	if (bUnderline) lf.lfUnderline = TRUE;
 	if (bStrikeout) lf.lfStrikeOut = TRUE;
 	if (bItalic) lf.lfItalic = TRUE;
+	if (nWeight) lf.lfWeight = nWeight;
 	HFONT hFont = ::CreateFontIndirect(&lf);
 	if (hFont == NULL) return NULL;
 
@@ -370,6 +384,7 @@ HFONT GlobalManager::AddFont(const std::wstring& strFontId, const std::wstring& 
 	pFontInfo->hFont = hFont;
 	pFontInfo->sFontName = fontName;
 	pFontInfo->iSize = nSize;
+	pFontInfo->iWeight = lf.lfWeight;
 	pFontInfo->bBold = bBold;
 	pFontInfo->bUnderline = bUnderline;
 	pFontInfo->bStrikeout = bStrikeout;

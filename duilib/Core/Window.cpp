@@ -66,7 +66,8 @@ Window::Window() :
 	m_strWindowResourcePath(),
 	m_aTranslateAccelerator(),
 	m_heightPercent(0),
-	m_closeFlag()
+	m_closeFlag(),
+	m_pUIAProvider(nullptr)
 {
 	LOGFONT lf = { 0 };
 	::GetObject(::GetStockObject(DEFAULT_GUI_FONT), sizeof(LOGFONT), &lf);
@@ -78,6 +79,7 @@ Window::Window() :
 	m_defaultFontInfo.hFont = hDefaultFont;
 	m_defaultFontInfo.sFontName = lf.lfFaceName;
 	m_defaultFontInfo.iSize = -lf.lfHeight;
+	m_defaultFontInfo.iWeight = FW_NORMAL;
 	m_defaultFontInfo.bBold = (lf.lfWeight >= FW_BOLD);
 	m_defaultFontInfo.bUnderline = (lf.lfUnderline == TRUE);
 	m_defaultFontInfo.bStrikeout = (lf.lfStrikeOut == TRUE);
@@ -251,6 +253,11 @@ void Window::ShowModalFake(HWND parent_hwnd)
 	m_bFakeModal = true;
 }
 
+bool Window::IsFakeModal()
+{
+	return m_bFakeModal;
+}
+
 void Window::CenterWindow()
 {
     ASSERT(::IsWindow(m_hWnd));
@@ -323,6 +330,15 @@ void Window::OnFinalMessage(HWND hWnd)
 {
 	UnregisterTouchWindowWrapper(m_hWnd);
 	SendNotify(kEventWindowClose);
+
+	if (nullptr != m_pUIAProvider) {
+		UiaDisconnectProvider(m_pUIAProvider);
+
+		m_pUIAProvider->ResetWindow();
+		m_pUIAProvider->Release();
+
+		m_pUIAProvider = nullptr;
+	}
 }
 
 LRESULT CALLBACK Window::__WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -379,6 +395,15 @@ LRESULT CALLBACK Window::__ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
     else {
         return ::DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
+}
+
+UIAWindowProvider* Window::GetUIAProvider()
+{
+	if (m_pUIAProvider == NULL)
+	{
+		m_pUIAProvider = new (std::nothrow) UIAWindowProvider(this);
+	}
+	return m_pUIAProvider;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -1485,7 +1510,16 @@ LRESULT Window::DoHandlMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& ha
 		return ::SendMessage(hWndChild, OCM__BASE + uMsg, wParam, lParam);
 	}
 	break;
+	case WM_GETOBJECT:
+	{
+		if (static_cast<long>(lParam) == static_cast<long>(UiaRootObjectId) && GlobalManager::IsAutomationEnabled()) {
+			handled = TRUE;
 
+
+			return UiaReturnRawElementProvider(m_hWnd, wParam, lParam, GetUIAProvider());
+		}
+	}
+	break;
 	default:
 		break;
 	}
