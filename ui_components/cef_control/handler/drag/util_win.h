@@ -19,7 +19,7 @@ void SetUserDataPtr(HWND hWnd, void* ptr);
 // Return the window's user data pointer.
 template <typename T>
 T GetUserDataPtr(HWND hWnd) {
-  return reinterpret_cast<T>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
+    return reinterpret_cast<T>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
 }
 
 // Set the window's window procedure pointer and return the old value.

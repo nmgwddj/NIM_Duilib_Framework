@@ -5,11 +5,9 @@
 
 #if defined(ENABLE_UIAUTOMATION)
 
-namespace ui
-{
+namespace ui {
 
-class UIAScrollBarProvider :public UIAControlProvider
-{
+class UIAScrollBarProvider : public UIAControlProvider {
 public:
     UIAScrollBarProvider() = delete;
     UIAScrollBarProvider(Control* pControl);
@@ -18,8 +16,11 @@ public:
     virtual IFACEMETHODIMP QueryInterface(REFIID riid, void** ppInterface);
 
     // IRawElementProviderSimple methods
-    virtual IFACEMETHODIMP GetPatternProvider(_In_ PATTERNID iid, _Outptr_result_maybenull_ IUnknown** retVal);
-    virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID propertyId, _Out_ VARIANT* pRetVal);
+    virtual IFACEMETHODIMP GetPatternProvider(
+        _In_ PATTERNID iid,
+        _Outptr_result_maybenull_ IUnknown** retVal);
+    virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID propertyId,
+                                            _Out_ VARIANT* pRetVal);
 
     // IRangeValueProvider methods
     virtual IFACEMETHODIMP SetValue(double val);
@@ -35,11 +36,12 @@ public:
     virtual IFACEMETHODIMP get_LargeChange(__RPC__out double* pRetVal);
 
     virtual IFACEMETHODIMP get_SmallChange(__RPC__out double* pRetVal);
+
 protected:
     virtual ~UIAScrollBarProvider();
 };
 
-}
+}  // namespace ui
 
 #endif
 

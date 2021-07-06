@@ -8,9 +8,9 @@
 #include <SDKDDKVer.h>
 
 // C runtime header
-#include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
+#include <stdlib.h>
 #include <tchar.h>
 
 // base header

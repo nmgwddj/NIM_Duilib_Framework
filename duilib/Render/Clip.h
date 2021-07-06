@@ -3,21 +3,21 @@
 
 #pragma once
 
-namespace ui 
-{
+namespace ui {
 
-class UILIB_API GdiClip : public IClip
-{
+class UILIB_API GdiClip : public IClip {
 public:
-	GdiClip();
+    GdiClip();
     ~GdiClip();
 
-	virtual void CreateClip(HDC hDC, UiRect rc) override;
-	virtual void CreateRoundClip(HDC hDC, UiRect rc, int width, int height) override;
-	virtual void ClearClip(HDC hDC) override;
+    virtual void CreateClip(HDC hDC, UiRect rc) override;
+    virtual void CreateRoundClip(HDC hDC,
+                                 UiRect rc,
+                                 int width,
+                                 int height) override;
+    virtual void ClearClip(HDC hDC) override;
 };
 
+}  // namespace ui
 
-} // namespace ui
-
-#endif // UI_RENDER_CLIP_H_
+#endif  // UI_RENDER_CLIP_H_

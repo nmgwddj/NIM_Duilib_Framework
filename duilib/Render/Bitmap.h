@@ -3,39 +3,48 @@
 
 #pragma once
 
-namespace ui
-{
+namespace ui {
 
-class GdiBitmap : public IBitmap
-{
+class GdiBitmap : public IBitmap {
 public:
-	GdiBitmap();
-	~GdiBitmap();
+    GdiBitmap();
+    ~GdiBitmap();
 
-	static HBITMAP CreateDIBBitmap(HDC hdc, int width, int height, bool flipBItmap, LPVOID* pBits);
+    static HBITMAP CreateDIBBitmap(HDC hdc,
+                                   int width,
+                                   int height,
+                                   bool flipBItmap,
+                                   LPVOID* pBits);
 
-	virtual bool Init(HDC hSrcDC, int width, int height, bool flipBItmap) override;
-	virtual void Clear() override;
-	virtual HBITMAP DetachBitmap() override;
+    virtual bool Init(HDC hSrcDC,
+                      int width,
+                      int height,
+                      bool flipBItmap) override;
+    virtual void Clear() override;
+    virtual HBITMAP DetachBitmap() override;
 
-	virtual HBITMAP GetBitmap() override;
-	virtual BYTE* GetBits() override;
-	virtual int	GetWidth() override;
-	virtual int GetHeight() override;
+    virtual HBITMAP GetBitmap() override;
+    virtual BYTE* GetBits() override;
+    virtual int GetWidth() override;
+    virtual int GetHeight() override;
 
-	virtual void ClearAlpha(const UiRect& rcDirty, int alpha) override;
-	virtual void RestoreAlpha(const UiRect& rcDirty, const UiRect& rcShadowPadding, int alpha) override;
-	virtual void RestoreAlpha(const UiRect& rcDirty, const UiRect& rcShadowPadding) override;
+    virtual void ClearAlpha(const UiRect& rcDirty, int alpha) override;
+    virtual void RestoreAlpha(const UiRect& rcDirty,
+                              const UiRect& rcShadowPadding,
+                              int alpha) override;
+    virtual void RestoreAlpha(const UiRect& rcDirty,
+                              const UiRect& rcShadowPadding) override;
+
 private:
-	void CleanUp();
+    void CleanUp();
 
 private:
-	HBITMAP	m_hBitmap;
-	BYTE	*m_pPiexl;
+    HBITMAP m_hBitmap;
+    BYTE* m_pPiexl;
 
-	int		m_nWidth;
-	int		m_nHeight;
+    int m_nWidth;
+    int m_nHeight;
 };
-} // namespace ui
+}  // namespace ui
 
-#endif // UI_CORE_RENDER_H_
+#endif  // UI_CORE_RENDER_H_

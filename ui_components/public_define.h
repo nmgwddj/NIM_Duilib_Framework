@@ -3,11 +3,8 @@
 
 namespace nim_comp {
 
-enum ThreadId
-{
-	kThreadUI
-};
+enum ThreadId { kThreadUI };
 
 }
 
-#endif // _PUBLIC_DEFINE_H_
+#endif  // _PUBLIC_DEFINE_H_

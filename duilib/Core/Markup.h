@@ -3,11 +3,9 @@
 
 #pragma once
 
-namespace ui 
-{
+namespace ui {
 
-enum
-{
+enum {
     XMLFILE_ENCODING_UTF8 = 0,
     XMLFILE_ENCODING_UNICODE = 1,
     XMLFILE_ENCODING_ASNI = 2,
@@ -15,16 +13,19 @@ enum
 
 class CMarkupNode;
 
-class UILIB_API CMarkup
-{
+class UILIB_API CMarkup {
     friend class CMarkupNode;
+
 public:
     CMarkup(LPCTSTR pstrXML = NULL);
     ~CMarkup();
 
     bool Load(LPCTSTR pstrXML);
-    bool LoadFromMem(BYTE* pByte, DWORD dwSize, int encoding = XMLFILE_ENCODING_UTF8);
-    bool LoadFromFile(LPCTSTR pstrFilename, int encoding = XMLFILE_ENCODING_UTF8);
+    bool LoadFromMem(BYTE* pByte,
+                     DWORD dwSize,
+                     int encoding = XMLFILE_ENCODING_UTF8);
+    bool LoadFromFile(LPCTSTR pstrFilename,
+                      int encoding = XMLFILE_ENCODING_UTF8);
     void Release();
     bool IsValid() const;
 
@@ -35,8 +36,7 @@ public:
     CMarkupNode GetRoot();
 
 private:
-    typedef struct tagXMLELEMENT
-    {
+    typedef struct tagXMLELEMENT {
         ULONG iStart;
         ULONG iChild;
         ULONG iNext;
@@ -66,10 +66,9 @@ private:
     bool _Failed(LPCTSTR pstrError, LPCTSTR pstrLocation = NULL);
 };
 
-
-class UILIB_API CMarkupNode
-{
+class UILIB_API CMarkupNode {
     friend class CMarkup;
+
 private:
     CMarkupNode();
     CMarkupNode(CMarkup* pOwner, int iPos);
@@ -101,8 +100,7 @@ private:
 
     enum { MAX_XML_ATTRIBUTES = 64 };
 
-    typedef struct
-    {
+    typedef struct {
         ULONG iName;
         ULONG iValue;
     } XMLATTRIBUTE;
@@ -113,6 +111,6 @@ private:
     CMarkup* m_pOwner;
 };
 
-} // namespace ui
+}  // namespace ui
 
-#endif // UI_CORE_MARKUP_H_
+#endif  // UI_CORE_MARKUP_H_

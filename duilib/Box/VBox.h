@@ -3,25 +3,24 @@
 
 #pragma once
 
-namespace ui
-{
+namespace ui {
 
-class UILIB_API VLayout : public Layout
-{
+class UILIB_API VLayout : public Layout {
 public:
-	VLayout();
-	/// 重写父类方法，提供个性化功能，请参考父类声明
-	virtual CSize ArrangeChild(const std::vector<Control*>& items, UiRect rc) override;
-	virtual CSize AjustSizeByChild(const std::vector<Control*>& items, CSize szAvailable) override;
+    VLayout();
+    /// 重写父类方法，提供个性化功能，请参考父类声明
+    virtual CSize ArrangeChild(const std::vector<Control*>& items,
+                               UiRect rc) override;
+    virtual CSize AjustSizeByChild(const std::vector<Control*>& items,
+                                   CSize szAvailable) override;
 };
 
-class UILIB_API VBox : public Box
-{
+class UILIB_API VBox : public Box {
 public:
-	VBox();
+    VBox();
 
-	virtual std::wstring GetType() const override;
+    virtual std::wstring GetType() const override;
 };
 
-}
-#endif // UI_CORE_VBOX_H_
+}  // namespace ui
+#endif  // UI_CORE_VBOX_H_

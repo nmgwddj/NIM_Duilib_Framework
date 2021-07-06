@@ -19,35 +19,35 @@ namespace ui {
 // 2.阴影应提前绘制好并进行缓存，而不是实时绘制
 class UILIB_API BoxShadow {
 public:
-	BoxShadow();
-	~BoxShadow();
+    BoxShadow();
+    ~BoxShadow();
 
-	/**
-	 * @brief 设置阴影属性
-	 * @param[in] strBoxShadow 要设置的属性,如 "color='black' offset='1,1' blursize='2'"
-	 * @return 无
-	 */
-	void SetBoxShadowString(const std::wstring& strBoxShadow);
+    /**
+     * @brief 设置阴影属性
+     * @param[in] strBoxShadow 要设置的属性,如 "color='black' offset='1,1'
+     * blursize='2'"
+     * @return 无
+     */
+    void SetBoxShadowString(const std::wstring& strBoxShadow);
 
-	/**
-	 * @brief 是否有阴影
-	 * @return 是或否
-	 */
-	bool HasShadow() const;
+    /**
+     * @brief 是否有阴影
+     * @return 是或否
+     */
+    bool HasShadow() const;
 
-	// 阴影属性
-	// 暂时仅仅支持 color offset blurSize
-	// https://codersblock.com/blog/creating-glow-effects-with-css/
+    // 阴影属性
+    // 暂时仅仅支持 color offset blurSize
+    // https://codersblock.com/blog/creating-glow-effects-with-css/
 
-	std::wstring m_strColor;
-	CPoint m_cpOffset;
-	int m_nBlurRadius;
-	int m_nBlurSize;
-	int m_nSpreadSize;
-	bool m_bExclude;
+    std::wstring m_strColor;
+    CPoint m_cpOffset;
+    int m_nBlurRadius;
+    int m_nBlurSize;
+    int m_nSpreadSize;
+    bool m_bExclude;
 };
 
-} // namespace ui
+}  // namespace ui
 
-#endif // !UI_UTILS_BOXSHADOW_H_
-
+#endif  // !UI_UTILS_BOXSHADOW_H_

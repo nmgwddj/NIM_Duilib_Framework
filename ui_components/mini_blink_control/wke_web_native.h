@@ -5,20 +5,24 @@
 namespace nim_comp {
 
 class WkeWebNative : public WebViewBase {
- public:
-  WkeWebNative();
-  ~WkeWebNative() override;
+public:
+    WkeWebNative();
+    ~WkeWebNative() override;
 
-  void InitNative(wkeWindowType type, HWND parent, int x, int y, int width, int height);
+    void InitNative(wkeWindowType type,
+                    HWND parent,
+                    int x,
+                    int y,
+                    int width,
+                    int height);
 
-  void MoveWebWindow(int x, int y);
+    void MoveWebWindow(int x, int y);
 
-  void MoveWebWindowToCenter();
+    void MoveWebWindowToCenter();
 
-  void ResizeWebWindow(int width, int height);
+    void ResizeWebWindow(int width, int height);
 
-  void ShowWebWindow(bool show);
-
+    void ShowWebWindow(bool show);
 };
 
-}
+}  // namespace nim_comp

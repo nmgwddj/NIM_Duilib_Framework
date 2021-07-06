@@ -14,37 +14,44 @@ using namespace ui;
  * @copyright (c) 2016, NetEase Inc. All rights reserved
  * @date 2019-03-22
  */
-class ShadowWnd : public WindowImplBase
-{
+class ShadowWnd : public WindowImplBase {
 public:
-	ShadowWnd();
+    ShadowWnd();
 
-	virtual std::wstring GetSkinFolder() override;
-	virtual std::wstring GetSkinFile() override;
-	virtual std::wstring GetWindowClassName() const override;
-	virtual LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) override;
-	
-	virtual HWND Create(Window* window);
+    virtual std::wstring GetSkinFolder() override;
+    virtual std::wstring GetSkinFile() override;
+    virtual std::wstring GetWindowClassName() const override;
+    virtual LRESULT MessageHandler(UINT uMsg,
+                                   WPARAM wParam,
+                                   LPARAM lParam,
+                                   BOOL& bHandled) override;
+
+    virtual HWND Create(Window* window);
+
 private:
-	Window*	window_ = nullptr;
+    Window* window_ = nullptr;
 };
 
 /** @class ShadowWnd
- * @brief 使用附加阴影窗口的基类，实现了创建窗口并附加的功能，提供没有 WS_EX_LAYERED 属性的窗口继承
+ * @brief 使用附加阴影窗口的基类，实现了创建窗口并附加的功能，提供没有
+ * WS_EX_LAYERED 属性的窗口继承
  * @copyright (c) 2016, NetEase Inc. All rights reserved
  * @date 2019-03-22
  */
-class ShadowWndBase : public WindowImplBase
-{
+class ShadowWndBase : public WindowImplBase {
 public:
-	ShadowWndBase();
+    ShadowWndBase();
 
-	virtual HWND Create(HWND hwndParent, LPCTSTR pstrName, DWORD dwStyle, DWORD dwExStyle, 
-		bool isLayeredWindow = false, const ui::UiRect& rc = ui::UiRect(0, 0, 0, 0)) override;
+    virtual HWND Create(HWND hwndParent,
+                        LPCTSTR pstrName,
+                        DWORD dwStyle,
+                        DWORD dwExStyle,
+                        bool isLayeredWindow = false,
+                        const ui::UiRect& rc = ui::UiRect(0, 0, 0, 0)) override;
 
 private:
-	ShadowWnd* shadow_wnd_;
+    ShadowWnd* shadow_wnd_;
 };
-} // namespace ui
+}  // namespace nim_comp
 
-#endif // __SHADOW_WND_H__
+#endif  // __SHADOW_WND_H__

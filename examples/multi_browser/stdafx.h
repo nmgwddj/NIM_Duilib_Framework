@@ -8,9 +8,9 @@
 #include "targetver.h"
 
 // C runtime header
-#include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
+#include <stdlib.h>
 #include <tchar.h>
 
 // base header
@@ -20,5 +20,5 @@
 #include "duilib/UIlib.h"
 
 // ui components
-#include "ui_components/ui_components.h"
 #include "ui_components/ui_cef_control.h"
+#include "ui_components/ui_components.h"

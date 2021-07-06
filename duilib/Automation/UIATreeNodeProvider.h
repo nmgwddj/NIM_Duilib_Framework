@@ -5,32 +5,34 @@
 
 #if defined(ENABLE_UIAUTOMATION)
 
-namespace ui
-{
+namespace ui {
 
-class UIATreeNodeProvider :public UIAListBoxItemProvider
-{
+class UIATreeNodeProvider : public UIAListBoxItemProvider {
 public:
-	UIATreeNodeProvider() = delete;
-	UIATreeNodeProvider(Control* pControl);
+    UIATreeNodeProvider() = delete;
+    UIATreeNodeProvider(Control* pControl);
 
-	// IUnknown methods
-	virtual IFACEMETHODIMP QueryInterface(REFIID riid, void** ppInterface);
+    // IUnknown methods
+    virtual IFACEMETHODIMP QueryInterface(REFIID riid, void** ppInterface);
 
-	// IRawElementProviderSimple methods
-	virtual IFACEMETHODIMP GetPatternProvider(_In_ PATTERNID iid, _Outptr_result_maybenull_ IUnknown** retVal);
-	virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID propertyId, _Out_ VARIANT* pRetVal);
+    // IRawElementProviderSimple methods
+    virtual IFACEMETHODIMP GetPatternProvider(
+        _In_ PATTERNID iid,
+        _Outptr_result_maybenull_ IUnknown** retVal);
+    virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID propertyId,
+                                            _Out_ VARIANT* pRetVal);
 
-	// IExpandCollapseProvider METHODS
-	virtual IFACEMETHODIMP Expand(void);
-	virtual IFACEMETHODIMP Collapse(void);
-	virtual IFACEMETHODIMP get_ExpandCollapseState(__RPC__out enum ExpandCollapseState* pRetVal);
+    // IExpandCollapseProvider METHODS
+    virtual IFACEMETHODIMP Expand(void);
+    virtual IFACEMETHODIMP Collapse(void);
+    virtual IFACEMETHODIMP get_ExpandCollapseState(
+        __RPC__out enum ExpandCollapseState* pRetVal);
 
 protected:
-	virtual ~UIATreeNodeProvider() {}
+    virtual ~UIATreeNodeProvider() {}
 };
 
-}
+}  // namespace ui
 
 #endif
 

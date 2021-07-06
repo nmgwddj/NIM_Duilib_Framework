@@ -3,10 +3,10 @@
 #include <GdiPlus.h>
 
 namespace ui {
-namespace GdiHelper{
+namespace GdiHelper {
 
 Gdiplus::Bitmap* CreateBitmapFromHBITMAP(HBITMAP hBitmap);
 
 }
 
-}
+}  // namespace ui

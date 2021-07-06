@@ -2,15 +2,14 @@
 namespace nim_comp {
 class PopoverBody;
 
-class TooltipBody :public PopoverBody
-{
+class TooltipBody : public PopoverBody {
 public:
-  TooltipBody(const std::wstring& content);
-  ~TooltipBody() = default;
+    TooltipBody(const std::wstring& content);
+    ~TooltipBody() = default;
 
-  std::wstring GetType() const override;
-  virtual ui::CSize EstimateSize(ui::CSize szAvailable) override;
-  void DoInit() override;
+    std::wstring GetType() const override;
+    virtual ui::CSize EstimateSize(ui::CSize szAvailable) override;
+    void DoInit() override;
 };
 
-}
+}  // namespace nim_comp

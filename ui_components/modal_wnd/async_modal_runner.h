@@ -4,7 +4,7 @@
 // util the inner has quit.
 //
 // To make the problem simple, we try to avoid the nested modal dialogs.
-// 
+//
 // When we want to run a modal dialog, the AsyncModalRunnerManager creates an
 // AsyncModalRunner and then run the modal dialog on it.
 //
@@ -22,58 +22,56 @@
 
 namespace nim_comp {
 
-class AsyncModalRunner : protected nbase::Thread
-{
+class AsyncModalRunner : protected nbase::Thread {
 public:
-	class Delegate
-	{
-	public:
-		virtual void OnThreadWillExit(AsyncModalRunner *runner) = 0;
-	};
+    class Delegate {
+    public:
+        virtual void OnThreadWillExit(AsyncModalRunner* runner) = 0;
+    };
 
-	AsyncModalRunner(Delegate* delegate);
-	virtual ~AsyncModalRunner();
+    AsyncModalRunner(Delegate* delegate);
+    virtual ~AsyncModalRunner();
 
-	// Once this method is called the runner will take
-	// the ownership of the dialog
-	bool DoModal(ModalWndBase *dlg);
-	void CancelModalThenExit();
-
-private:
-	template <class _Ty>
-	friend class std::shared_ptr;
-	friend class AsyncModalRunnerManager;
-	void Run();
+    // Once this method is called the runner will take
+    // the ownership of the dialog
+    bool DoModal(ModalWndBase* dlg);
+    void CancelModalThenExit();
 
 private:
-	bool is_running_;
-	bool quit_posted_;
-	Delegate *delegate_;
-	nbase::WaitableEvent event_;
-	std::unique_ptr<ModalWndBase> modal_dlg_;
+    template <class _Ty>
+    friend class std::shared_ptr;
+    friend class AsyncModalRunnerManager;
+    void Run();
+
+private:
+    bool is_running_;
+    bool quit_posted_;
+    Delegate* delegate_;
+    nbase::WaitableEvent event_;
+    std::unique_ptr<ModalWndBase> modal_dlg_;
 };
 
-class AsyncModalRunnerManager : public AsyncModalRunner::Delegate, public nbase::SupportWeakCallback
-{
+class AsyncModalRunnerManager : public AsyncModalRunner::Delegate,
+                                public nbase::SupportWeakCallback {
 public:
-	SINGLETON_DEFINE(AsyncModalRunnerManager);
+    SINGLETON_DEFINE(AsyncModalRunnerManager);
 
-	// Once this method is called the runner will take
-	// the ownership of the dialog
-	bool DoModal(ModalWndBase *dlg);
-	void CancelAllThreads();
+    // Once this method is called the runner will take
+    // the ownership of the dialog
+    bool DoModal(ModalWndBase* dlg);
+    void CancelAllThreads();
 
 private:
-	AsyncModalRunnerManager();
-	virtual ~AsyncModalRunnerManager();
+    AsyncModalRunnerManager();
+    virtual ~AsyncModalRunnerManager();
 
-	void OnThreadWillExit(AsyncModalRunner *runner);
-	void Deregister(AsyncModalRunner *runner);
+    void OnThreadWillExit(AsyncModalRunner* runner);
+    void Deregister(AsyncModalRunner* runner);
 
-	nbase::NLock threads_lock_;
-	std::list<std::shared_ptr<AsyncModalRunner> > runners_;
+    nbase::NLock threads_lock_;
+    std::list<std::shared_ptr<AsyncModalRunner> > runners_;
 };
 
-}
+}  // namespace nim_comp
 
-#endif //NIM_WIN_GUI_MSG_BOX_ASYNC_MODAL_RUNNER_H_
+#endif  // NIM_WIN_GUI_MSG_BOX_ASYNC_MODAL_RUNNER_H_

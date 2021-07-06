@@ -4,14 +4,12 @@
 
 namespace nim_comp {
 
-bool AsyncDoModal(ModalWndBase *dlg)
-{
-	return AsyncModalRunnerManager::GetInstance()->DoModal(dlg);
+bool AsyncDoModal(ModalWndBase* dlg) {
+    return AsyncModalRunnerManager::GetInstance()->DoModal(dlg);
 }
 
-void CancelAllAsyncModalDialogs()
-{
-	AsyncModalRunnerManager::GetInstance()->CancelAllThreads();
+void CancelAllAsyncModalDialogs() {
+    AsyncModalRunnerManager::GetInstance()->CancelAllThreads();
 }
 
-}
+}  // namespace nim_comp

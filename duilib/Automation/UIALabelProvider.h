@@ -5,11 +5,9 @@
 
 #if defined(ENABLE_UIAUTOMATION)
 
-namespace ui
-{
+namespace ui {
 
-class UIALabelProvider :public UIAControlProvider
-{
+class UIALabelProvider : public UIAControlProvider {
 public:
     UIALabelProvider() = delete;
     UIALabelProvider(Control* pControl);
@@ -18,8 +16,11 @@ public:
     virtual IFACEMETHODIMP QueryInterface(REFIID riid, void** ppInterface);
 
     // IRawElementProviderSimple methods
-    virtual IFACEMETHODIMP GetPatternProvider(_In_ PATTERNID iid, _Outptr_result_maybenull_ IUnknown** retVal);
-    virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID idProp, _Out_ VARIANT* retVal);
+    virtual IFACEMETHODIMP GetPatternProvider(
+        _In_ PATTERNID iid,
+        _Outptr_result_maybenull_ IUnknown** retVal);
+    virtual IFACEMETHODIMP GetPropertyValue(_In_ PROPERTYID idProp,
+                                            _Out_ VARIANT* retVal);
 
     // IValueProvider methods
     virtual IFACEMETHODIMP SetValue(_In_ LPCWSTR val);
@@ -30,7 +31,7 @@ protected:
     virtual ~UIALabelProvider();
 };
 
-}
+}  // namespace ui
 
 #endif
 
