@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 // #include "VirtualTileBox.h"
 #include <map>
@@ -18,16 +18,16 @@ public:
 	virtual ui::Control* CreateElement() override;
 
 	/**
-	* @brief Ìî³äÖ¸¶¨×ÓÏî
-	* @param[in] control ×ÓÏî¿Ø¼şÖ¸Õë
-	* @param[in] index Ë÷Òı
-	* @return ·µ»Ø´´½¨ºóµÄ×ÓÏîÖ¸Õë
+	* @brief å¡«å……æŒ‡å®šå­é¡¹
+	* @param[in] control å­é¡¹æ§ä»¶æŒ‡é’ˆ
+	* @param[in] index ç´¢å¼•
+	* @return è¿”å›åˆ›å»ºåçš„å­é¡¹æŒ‡é’ˆ
 	*/
 	virtual void FillElement(ui::Control *control, int index) override;
 
 	/**
-	* @brief »ñÈ¡×ÓÏî×ÜÊı
-	* @return ·µ»Ø×ÓÏî×ÜÊı
+	* @brief è·å–å­é¡¹æ€»æ•°
+	* @return è¿”å›å­é¡¹æ€»æ•°
 	*/
 	virtual int GetElementtCount() override;
 

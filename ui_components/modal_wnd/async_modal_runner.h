@@ -1,4 +1,4 @@
-// It is difficult to deal with nested modal dialogs. When our UI thread is
+﻿// It is difficult to deal with nested modal dialogs. When our UI thread is
 // already running a modal loop, if we run a second modal loop while dispatching
 // a message, then the modal loops are nested. We cannot quit the outer loop
 // util the inner has quit.

@@ -1,4 +1,4 @@
-// Lock implementation and Auto lock implementation
+﻿// Lock implementation and Auto lock implementation
 
 #ifndef BASE_SYNCHRONIZATION_LOCK_H
 #define BASE_SYNCHRONIZATION_LOCK_H

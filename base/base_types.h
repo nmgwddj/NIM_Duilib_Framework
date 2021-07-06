@@ -1,4 +1,4 @@
-// This file defines base types
+﻿// This file defines base types
 
 #ifndef BASE_BASE_TYPES_H
 #define BASE_BASE_TYPES_H

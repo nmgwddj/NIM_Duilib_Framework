@@ -1,4 +1,4 @@
-// Implementation of Encrypt/Decrypt Method Interface
+ï»¿// Implementation of Encrypt/Decrypt Method Interface
 
 #ifndef BASE_ENCRYPT_ENCRYPT_IMPL_H_
 #define BASE_ENCRYPT_ENCRYPT_IMPL_H_
@@ -1055,7 +1055,7 @@ public:
 
 		case nbase::ENC_RSA:
 		{
-			assert(false);	//ÔİÊ±²»Ö§³Ö
+			assert(false);	//æš‚æ—¶ä¸æ”¯æŒ
 			return nullptr;
 		}
 		case nbase::ENC_ARC4:

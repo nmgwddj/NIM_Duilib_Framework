@@ -1,4 +1,4 @@
-#ifndef BASE_WIN_OBJECT_WATCHER_H_
+﻿#ifndef BASE_WIN_OBJECT_WATCHER_H_
 #define BASE_WIN_OBJECT_WATCHER_H_
 #pragma once
 

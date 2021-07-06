@@ -1,4 +1,4 @@
-#include "des.h"
+ï»¿#include "des.h"
 #include "base/base_types.h"
 #include "base/util/string_util.h"
 
@@ -599,7 +599,7 @@ void yxDES::DecryptAnyLength(char* _srcBytes,unsigned int _bytesLength, unsigned
 	}
 }
 
-//×Ö·û´®×ª16½øÖÆÃÜÎÄÎÄ±¾
+//å­—ç¬¦ä¸²è½¬16è¿›åˆ¶å¯†æ–‡æ–‡æœ¬
 void yxDES::ConvertCiphertext2Hex(char *szPlainInBytes)
 {
 	if (!szPlainInBytes)
@@ -615,7 +615,7 @@ void yxDES::ConvertCiphertext2Hex(char *szPlainInBytes)
 	delete[] bitsCiphertextAnyLength;
 }
 
-//16½øÖÆÃÜÎÄ×ª×Ö·û´®
+//16è¿›åˆ¶å¯†æ–‡è½¬å­—ç¬¦ä¸²
 int yxDES::ConvertHex2Ciphertext(const char *szCipherInBytes)
 {
 	char* bitsTmpCiphertextAnyLength = new char[data_base_length_*4];
@@ -639,30 +639,30 @@ int yxDES::ConvertHex2Ciphertext(const char *szCipherInBytes)
 	return iLen >>3;
 }
 
-//CiphertextDataº¯Êı
+//CiphertextDataå‡½æ•°
 char* yxDES::GetCiphertextData()
 {
 	return szCiphertextData;
 }
 
-//hexCiphertextAnyLengthº¯Êı
+//hexCiphertextAnyLengthå‡½æ•°
 char* yxDES::GetHexCipherAnyLengthData()
 {
 	return hexCiphertextAnyLength;
 }
 
-//¹¦ÄÜ:ÉèÖÃ¼Ó½âÃÜºÍÌî³äÄ£Ê½£¬Èç¹ûÓÃ»§²»µ÷ÓÃÄ¬ÈÏÄ£Ê½¶¼ÊÇ0
-//²ÎÊı:ÕûĞÍ
-//½á¹û:º¯Êı½«½á¹û´æÓÚint m_iModeºÍint m_iPkcs
+//åŠŸèƒ½:è®¾ç½®åŠ è§£å¯†å’Œå¡«å……æ¨¡å¼ï¼Œå¦‚æœç”¨æˆ·ä¸è°ƒç”¨é»˜è®¤æ¨¡å¼éƒ½æ˜¯0
+//å‚æ•°:æ•´å‹
+//ç»“æœ:å‡½æ•°å°†ç»“æœå­˜äºint m_iModeå’Œint m_iPkcs
 void yxDES::SetModeAndPKCS(int iMode/* = 0*/,int iPKCS/* = 0*/)
 {
 	m_iMode = iMode;
 	m_iPkcs = iPKCS;
 }
 
-//¹¦ÄÜ:ÉèÖÃ
-//²ÎÊı:8Î»×Ö·û´®
-//½á¹û:º¯Êı½«½á¹û´æÓÚchar szvi[8]ºÍchar szviRev[8]
+//åŠŸèƒ½:è®¾ç½®
+//å‚æ•°:8ä½å­—ç¬¦ä¸²
+//ç»“æœ:å‡½æ•°å°†ç»“æœå­˜äºchar szvi[8]å’Œchar szviRev[8]
 void yxDES::SetIV(char* srcBytes)
 {
 	memset(sziv,0x0,8);

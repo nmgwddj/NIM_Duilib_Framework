@@ -1,4 +1,4 @@
-// This file defines error and exception
+﻿// This file defines error and exception
 
 #ifndef BASE_ERROR_H_
 #define BASE_ERROR_H_

@@ -1,4 +1,4 @@
-// Thread is the low-level platform-specific abstraction
+﻿// Thread is the low-level platform-specific abstraction
 // to the OS's threading interface. 
 
 #ifndef BASE_THREAD_THREAD_H_

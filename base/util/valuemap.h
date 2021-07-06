@@ -1,4 +1,4 @@
-// name/value map
+ï»¿// name/value map
 // !note: the map save the point of value, so the value's life circle must more than the valuemap
 
 #ifndef BASE_UTIL_VALUEMAP_H_
@@ -14,7 +14,7 @@ namespace nbase
 class BASE_EXPORT ValueMap
 {
 public:
-    // ²ÎÊıµÄ·ÃÎÊÏŞÖÆ
+    // å‚æ•°çš„è®¿é—®é™åˆ¶
     enum
 	{
         access_read  = 0x01,

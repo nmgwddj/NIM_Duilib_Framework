@@ -1,4 +1,4 @@
-# RichEdit（富文本控件）
+﻿# RichEdit（富文本控件）
 
 `RichEdit` 继承了 `ScrollableBox` 容器属性和方法，更多可用属性和方法请参考：[ScrollableBox](../Containers/ScrollableBox.md) 容器
 

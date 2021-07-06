@@ -1,4 +1,4 @@
-// Copyright (c) 2013, NetEase Inc. All rights reserved.
+﻿// Copyright (c) 2013, NetEase Inc. All rights reserved.
 //
 // WRT
 // 2013/8/30

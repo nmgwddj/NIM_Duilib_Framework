@@ -1,4 +1,4 @@
-# VirtualListBox（虚拟列表）
+﻿# VirtualListBox（虚拟列表）
 
 `VirtualListBox` 继承了 `ListBox` 容器属性和方法，更多可用属性和方法请参考：[ListBox](ListBox.md) 容器
 

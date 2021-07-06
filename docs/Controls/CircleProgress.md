@@ -1,4 +1,4 @@
-# CircleProgress（环形进度条）
+﻿# CircleProgress（环形进度条）
 
 `CircleProgress` 继承了 `Progress` 控件属性和方法，更多可用属性和方法请参考：[Progress](Progress.md) 控件
 

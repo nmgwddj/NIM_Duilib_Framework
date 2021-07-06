@@ -1,4 +1,4 @@
-#ifndef LIBXL_ISHEETT_H
+﻿#ifndef LIBXL_ISHEETT_H
 #define LIBXL_ISHEETT_H
 
 #include "setup.h"

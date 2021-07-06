@@ -1,4 +1,4 @@
-#ifndef UI_CORE_VBOX_H_
+ï»¿#ifndef UI_CORE_VBOX_H_
 #define UI_CORE_VBOX_H_
 
 #pragma once
@@ -10,7 +10,7 @@ class UILIB_API VLayout : public Layout
 {
 public:
 	VLayout();
-	/// ÖØĞ´¸¸Àà·½·¨£¬Ìá¹©¸öĞÔ»¯¹¦ÄÜ£¬Çë²Î¿¼¸¸ÀàÉùÃ÷
+	/// é‡å†™çˆ¶ç±»æ–¹æ³•ï¼Œæä¾›ä¸ªæ€§åŒ–åŠŸèƒ½ï¼Œè¯·å‚è€ƒçˆ¶ç±»å£°æ˜
 	virtual CSize ArrangeChild(const std::vector<Control*>& items, UiRect rc) override;
 	virtual CSize AjustSizeByChild(const std::vector<Control*>& items, CSize szAvailable) override;
 };

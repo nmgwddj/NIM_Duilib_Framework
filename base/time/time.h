@@ -1,4 +1,4 @@
-// Time represents an absolute point in time, internally represented as
+﻿// Time represents an absolute point in time, internally represented as
 // microseconds (s/1,000,000) since a platform-dependent epoch.  Each
 // platform's epoch, along with other system-dependent clock interface
 // routines, is defined in time_PLATFORM.cc.

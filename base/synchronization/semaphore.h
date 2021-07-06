@@ -1,4 +1,4 @@
-// Semaphore implementation
+﻿// Semaphore implementation
 
 #ifndef BASE_SYNCHRONIZATION_SEMAPHORE_H_
 #define BASE_SYNCHRONIZATION_SEMAPHORE_H_

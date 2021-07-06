@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+﻿#include "StdAfx.h"
 #include "BoxShadow.h"
 
 ui::BoxShadow::BoxShadow() :

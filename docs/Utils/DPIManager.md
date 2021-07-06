@@ -1,4 +1,4 @@
-# DpiManager（DPI 管理）
+﻿# DpiManager（DPI 管理）
 
 | 方法名称 | 用途 |
 | :--- | :--- |

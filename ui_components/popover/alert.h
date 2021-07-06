@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 namespace nim_comp {
 class PopoverFooter;
 

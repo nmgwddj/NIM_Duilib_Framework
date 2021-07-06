@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "cef_control/control/cef_control_base.h"
 #include "cef_control/control/cef_control.h"

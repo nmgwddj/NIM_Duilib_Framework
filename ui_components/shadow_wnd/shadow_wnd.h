@@ -1,4 +1,4 @@
-#ifndef __SHADOW_WND_H__
+ï»¿#ifndef __SHADOW_WND_H__
 #define __SHADOW_WND_H__
 
 #pragma once
@@ -10,7 +10,7 @@ namespace nim_comp {
 using namespace ui;
 
 /** @class ShadowWnd
- * @brief Ò»¸ö¸½¼Óµ½»ù´¡´°¿ÚÖÜÎ§µÄ´°¿Ú£¬´øÓĞ WS_EX_LAYERED ÊôĞÔÀ´ÊµÏÖÒõÓ°
+ * @brief ä¸€ä¸ªé™„åŠ åˆ°åŸºç¡€çª—å£å‘¨å›´çš„çª—å£ï¼Œå¸¦æœ‰ WS_EX_LAYERED å±æ€§æ¥å®ç°é˜´å½±
  * @copyright (c) 2016, NetEase Inc. All rights reserved
  * @date 2019-03-22
  */
@@ -30,7 +30,7 @@ private:
 };
 
 /** @class ShadowWnd
- * @brief Ê¹ÓÃ¸½¼ÓÒõÓ°´°¿ÚµÄ»ùÀà£¬ÊµÏÖÁË´´½¨´°¿Ú²¢¸½¼ÓµÄ¹¦ÄÜ£¬Ìá¹©Ã»ÓĞ WS_EX_LAYERED ÊôĞÔµÄ´°¿Ú¼Ì³Ğ
+ * @brief ä½¿ç”¨é™„åŠ é˜´å½±çª—å£çš„åŸºç±»ï¼Œå®ç°äº†åˆ›å»ºçª—å£å¹¶é™„åŠ çš„åŠŸèƒ½ï¼Œæä¾›æ²¡æœ‰ WS_EX_LAYERED å±æ€§çš„çª—å£ç»§æ‰¿
  * @copyright (c) 2016, NetEase Inc. All rights reserved
  * @date 2019-03-22
  */

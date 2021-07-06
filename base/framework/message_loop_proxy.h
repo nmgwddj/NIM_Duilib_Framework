@@ -1,4 +1,4 @@
-// This file trys to implement a cross flatform message loop proxy,
+﻿// This file trys to implement a cross flatform message loop proxy,
 // the mechanism of which is from the Google Chrome project.
 
 #ifndef BASE_MESSAGE_LOOP_PROXY_H_

@@ -1,4 +1,4 @@
-#ifndef UI_VERSION_HELPERS_H_
+ï»¿#ifndef UI_VERSION_HELPERS_H_
 #define UI_VERSION_HELPERS_H_
 
 #pragma once
@@ -90,7 +90,7 @@ VERSIONHELPERAPI IsWindows8OrGreater()
     return IsWindowsVersionOrGreater(HIBYTE(_WIN32_WINNT_WIN8), LOBYTE(_WIN32_WINNT_WIN8), 0);
 }
 
-// win8ÒÔÉÏµÄÏµÍ³¼ì²â£¬±ØĞëÒª¸ø³ÌĞò¸½¼ÓmanifestÎÄ¼ş£¬²¢ÇÒÓÃsupportedOS±êÇ©Ö¸¶¨Ö§³Öwin8.1ºÍwin10£¬·ñÔòÎŞ·¨×î¶à¼ì²âµ½win8ÏµÍ³
+// win8ä»¥ä¸Šçš„ç³»ç»Ÿæ£€æµ‹ï¼Œå¿…é¡»è¦ç»™ç¨‹åºé™„åŠ manifestæ–‡ä»¶ï¼Œå¹¶ä¸”ç”¨supportedOSæ ‡ç­¾æŒ‡å®šæ”¯æŒwin8.1å’Œwin10ï¼Œå¦åˆ™æ— æ³•æœ€å¤šæ£€æµ‹åˆ°win8ç³»ç»Ÿ
 VERSIONHELPERAPI IsWindows8Point1OrGreater()
 {
 	return IsWindowsVersionOrGreater(HIBYTE(_WIN32_WINNT_WINBLUE), LOBYTE(_WIN32_WINNT_WINBLUE), 0);

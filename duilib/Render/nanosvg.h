@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (c) 2013-14 Mikko Mononen memon@inside.org
  *
  * This software is provided 'as-is', without any express or implied

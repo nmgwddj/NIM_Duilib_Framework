@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "provider.h"
 #include "item.h"
 
@@ -35,7 +35,7 @@ void Provider::FillElement(ui::Control *control, int index)
 
 int Provider::GetElementtCount()
 {
-	// ¼ÓËø
+	// åŠ é”
 	nbase::NAutoLock auto_lock(&lock_);
 	return m_vTasks.size();
 }
@@ -45,19 +45,19 @@ void Provider::SetTotal(int nTotal)
 	if (nTotal == m_nTotal) return;
 	if (nTotal <= 0) return;
 
-	// ¼ÓËø
+	// åŠ é”
 	lock_.Lock();
 	m_vTasks.clear();
 	for (auto i=1; i <= nTotal; i++)
 	{
 		DownloadTask task;
 		task.nId = i;
-		task.sName = L"ÈÎÎñÃû³Æ";
+		task.sName = L"ä»»åŠ¡åç§°";
 		m_vTasks.emplace_back(task);
 	}
 	lock_.Unlock();
 
-	// Í¨ÖªTileBoxÊı¾İ×ÜÊı±ä¶¯
+	// é€šçŸ¥TileBoxæ•°æ®æ€»æ•°å˜åŠ¨
 	EmitCountChanged();
 }
 
@@ -70,7 +70,7 @@ void Provider::RemoveTask(int nIndex)
 
 	lock_.Unlock();
 
-	// Í¨ÖªTileBoxÊı¾İ×ÜÊı±ä¶¯
+	// é€šçŸ¥TileBoxæ•°æ®æ€»æ•°å˜åŠ¨
 	EmitCountChanged();
 }
 
@@ -81,6 +81,6 @@ void Provider::ChangeTaskName(int nIndex, const std::wstring& sName)
 		m_vTasks[nIndex].sName = sName;
 	}
 
-	// ·¢ËÍÊı¾İ±ä¶¯Í¨Öª
+	// å‘é€æ•°æ®å˜åŠ¨é€šçŸ¥
 	EmitDataChanged(nIndex, nIndex);
 }

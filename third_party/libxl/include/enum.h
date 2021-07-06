@@ -1,4 +1,4 @@
-#ifndef LIBXL_ENUM_CPP_H
+﻿#ifndef LIBXL_ENUM_CPP_H
 #define LIBXL_ENUM_CPP_H
 
 namespace libxl {

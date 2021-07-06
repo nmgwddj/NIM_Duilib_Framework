@@ -1,4 +1,4 @@
-#ifndef LIBXL_SETUP_CPP_H
+﻿#ifndef LIBXL_SETUP_CPP_H
 #define LIBXL_SETUP_CPP_H
 
 #ifdef LIBXL_STDCALL

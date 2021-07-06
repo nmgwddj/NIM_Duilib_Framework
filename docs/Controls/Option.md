@@ -1,4 +1,4 @@
-# Option（单选框）
+﻿# Option（单选框）
 
 `Option` 继承了 `CheckBox` 控件属性和方法，更多可用属性和方法请参考：[CheckBox](CheckBox.md) 控件
 

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "DateTime.h"
 #include <windowsx.h>
 #include <OleCtl.h>

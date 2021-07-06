@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  *	Author		wrt(guangguang)
  *	Date		2010-09-01

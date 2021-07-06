@@ -1,4 +1,4 @@
-#ifndef UI_RENDER_BITMAP_H_
+﻿#ifndef UI_RENDER_BITMAP_H_
 #define UI_RENDER_BITMAP_H_
 
 #pragma once

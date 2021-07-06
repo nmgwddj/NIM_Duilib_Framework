@@ -1,4 +1,4 @@
-# ListContainerElement（列表项）
+﻿# ListContainerElement（列表项）
 
 `ListContainerElement` 控件继承了 `CheckBox` 控件和 `Box` 布局属性和方法，更多可用属性和方法请参考：[CheckBox](../Controls/CheckBox.md) 控件和 [Box](../Containers/Box.md) 自由布局容器
 

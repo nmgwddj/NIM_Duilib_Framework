@@ -1,4 +1,4 @@
-// cpu description
+﻿// cpu description
 
 #ifndef BASE_HARDWARE_CPU_H_
 #define BASE_HARDWARE_CPU_H_

@@ -1,4 +1,4 @@
-# ScrollBar（滚动条）
+﻿# ScrollBar（滚动条）
 
 `ScrollBar` 继承了 `Control` 控件属性和方法，更多可用属性和方法请参考：[Control](Control.md) 控件
 

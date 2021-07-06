@@ -1,4 +1,4 @@
-#ifndef _TOOL_FILE_DIALOGEX_H_
+﻿#ifndef _TOOL_FILE_DIALOGEX_H_
 #define _TOOL_FILE_DIALOGEX_H_
 
 #include "modal_wnd_base.h"

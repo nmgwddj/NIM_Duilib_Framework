@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MyGrid.h"
 
 using namespace ui;
@@ -106,7 +106,7 @@ void MyGridBody::OnColumnCountChanged(int col_index, bool bRemove)
 
 bool MyGridBody::OnScrollPosChanged(ui::EventArgs* args)
 {
-	if (args->wParam > 0)	//y·½Ïò
+	if (args->wParam > 0)	//yæ–¹å‘
 	{
 		ResetHeanderComboPos();
 	}
@@ -210,7 +210,7 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 					if (m_hLayout[j] == 0)
 						continue;
 					std::wstring str = grid_row->at(j)->text;
-					if (!str.empty() && posx + m_hLayout[j] - szOff.cx > fixed_col_width)		//µ¥Ôª¸ñÓÒ±ßÏßÃ»ÓÐ³¬¹ýfixed_col_width
+					if (!str.empty() && posx + m_hLayout[j] - szOff.cx > fixed_col_width)		//å•å…ƒæ ¼å³è¾¹çº¿æ²¡æœ‰è¶…è¿‡fixed_col_width
 					{
 						UiRect rc = { posx, posy, posx + m_hLayout[j], posy + m_vLayout[i] };
 						if (i == 0)
@@ -221,11 +221,11 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 						pRender->DrawText(rc, str, dwDefColor, m_strGridFont, m_uTextStyle, 255, false);
 					}
 					posx += m_hLayout[j];
-					if (posx - szOff.cx > grid_width)	//³¬³ögrid¿í¶È
+					if (posx - szOff.cx > grid_width)	//è¶…å‡ºgridå®½åº¦
 						break;
 				}
 				posy += m_vLayout[i];
-				if (posy - szOff.cy > grid_height)		//³¬³ögrid¸ß¶È
+				if (posy - szOff.cy > grid_height)		//è¶…å‡ºgridé«˜åº¦
 					break;
 			}
 		}
@@ -248,18 +248,18 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 						continue;
 					GridRow *grid_row = m_vecRow[j];
 					std::wstring str = grid_row->at(i)->text;
-					if (!str.empty() && posy + m_vLayout[j] - szOff.cy > fixed_row_height)		//µ¥Ôª¸ñÏÂ±ßÏßÃ»ÓÐ³¬¹ýfixed_row_height
+					if (!str.empty() && posy + m_vLayout[j] - szOff.cy > fixed_row_height)		//å•å…ƒæ ¼ä¸‹è¾¹çº¿æ²¡æœ‰è¶…è¿‡fixed_row_height
 					{
 						UiRect rc = { posx, posy, posx + m_hLayout[i], posy + m_vLayout[j] };
 						rc.Offset({ m_rcItem.left, m_rcItem.top - szOff.cy });
 						pRender->DrawText(rc, str, dwDefColor, m_strGridFont, m_uTextStyle, 255, false);
 					}
 					posy += m_vLayout[j];
-					if (posy - szOff.cy > grid_height)	//³¬³ögrid¸ß¶È
+					if (posy - szOff.cy > grid_height)	//è¶…å‡ºgridé«˜åº¦
 						break;
 				}
 				posx += m_hLayout[i];
-				if (posx - szOff.cx > grid_width)		//³¬³ögrid¿í¶È
+				if (posx - szOff.cx > grid_width)		//è¶…å‡ºgridå®½åº¦
 					break;
 			}
 		}
@@ -275,7 +275,7 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 			{
 				if (m_vLayout[i] == 0)
 					continue;
-				if (posy + m_vLayout[i] - szOff.cy > fixed_row_height)		//µ¥Ôª¸ñÏÂ±ßÏßÃ»ÓÐ³¬¹ýfixed_row_height
+				if (posy + m_vLayout[i] - szOff.cy > fixed_row_height)		//å•å…ƒæ ¼ä¸‹è¾¹çº¿æ²¡æœ‰è¶…è¿‡fixed_row_height
 				{
 					GridRow *grid_row = m_vecRow[i];
 					posx = GetFixedColWidth();
@@ -289,7 +289,7 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 						UiRect rc = { posx, posy, posx + m_hLayout[j], posy + m_vLayout[i] };
 						rc.Offset({ m_rcItem.left - szOff.cx, m_rcItem.top - szOff.cy });
 						rc.Deflate({ 1, 1, 2, 2 });
-						//»æÖÆµ¥Ôª¸ñ±³¾°É«
+						//ç»˜åˆ¶å•å…ƒæ ¼èƒŒæ™¯è‰²
 						if (pItem->IsSelected())
 						{
 							pRender->DrawColor(rc, m_strSelForeColor, 255);
@@ -299,9 +299,9 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 							pRender->DrawColor(rc, pItem->bk_color, 255);
 						}
 
-						//»æÖÆtext
+						//ç»˜åˆ¶text
 						std::wstring str = pItem->text;
-						if (!str.empty() && posx + m_hLayout[j] - szOff.cx > fixed_col_width)		//µ¥Ôª¸ñÓÒ±ßÏßÃ»ÓÐ³¬¹ýfixed_col_width
+						if (!str.empty() && posx + m_hLayout[j] - szOff.cx > fixed_col_width)		//å•å…ƒæ ¼å³è¾¹çº¿æ²¡æœ‰è¶…è¿‡fixed_col_width
 						{
 							if (pItem->text_color.empty() && pItem->text_style == 0)
 								pRender->DrawText(rc, str, dwDefColor, m_strGridFont, m_uTextStyle, 255, false);
@@ -312,12 +312,12 @@ void MyGridBody::PaintBody(IRenderContext* pRender)
 							}
 						}
 						posx += m_hLayout[j];
-						if (posx - szOff.cx > grid_width)		//³¬³ögrid¿í¶È
+						if (posx - szOff.cx > grid_width)		//è¶…å‡ºgridå®½åº¦
 							break;
 					}
 				}
 				posy += m_vLayout[i];
-				if (posy - szOff.cy > grid_height)			//³¬³ögrid¸ß¶È
+				if (posy - szOff.cy > grid_height)			//è¶…å‡ºgridé«˜åº¦
 					break;
 			}
 		}

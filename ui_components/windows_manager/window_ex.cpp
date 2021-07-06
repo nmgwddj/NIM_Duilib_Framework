@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "window_ex.h"
 #include "windows_manager.h"
 
@@ -84,7 +84,7 @@ POINT GetPopupWindowPos(WindowEx* window)
 {
 	ASSERT(window && IsWindow(window->GetHWND()));
 
-	//ÆÁÄ»´óÐ¡
+	//å±å¹•å¤§å°
 	MONITORINFO oMonitor = { sizeof(oMonitor) };
 	::GetMonitorInfo(::MonitorFromWindow(window->GetHWND(), MONITOR_DEFAULTTONEAREST), &oMonitor);
 	RECT screen = oMonitor.rcWork;

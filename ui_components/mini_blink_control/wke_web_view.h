@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "web_view_base.h"
 
@@ -18,7 +18,7 @@ class WkeWebView : public ui::Control,
   void SetWindow(ui::Window* pManager, ui::Box* pParent, bool bInit) override;
 
   // override from ui::IUIMessageFilter
-  LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) override; // ´¦Àí´°ÌåÏûÏ¢£¬×ª·¢µ½miniblink
+  LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled) override; // å¤„ç†çª—ä½“æ¶ˆæ¯ï¼Œè½¬å‘åˆ°miniblink
 
   void OnPaint(wkeWebView webView, const void* buffer, const wkeRect* r, int width, int height);
 

@@ -1,4 +1,4 @@
-// This file defines the block buffer
+﻿// This file defines the block buffer
 
 #ifndef BASE_MEMORY_BLOCKBUFFER_H_
 #define BASE_MEMORY_BLOCKBUFFER_H_

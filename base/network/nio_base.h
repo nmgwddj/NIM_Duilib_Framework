@@ -1,4 +1,4 @@
-// Network io base interface
+﻿// Network io base interface
 
 #ifndef BASE_NETWORK_NIO_H_
 #define BASE_NETWORK_NIO_H_

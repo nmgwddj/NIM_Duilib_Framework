@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "popover_form.h"
 
 const std::wstring PopoverForm::kClassName = L"Popover";

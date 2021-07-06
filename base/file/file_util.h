@@ -1,4 +1,4 @@
-// Utilities for file and filepath operation
+﻿// Utilities for file and filepath operation
 
 #ifndef BASE_FILE_FILE_UTIL_H_
 #define BASE_FILE_FILE_UTIL_H_

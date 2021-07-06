@@ -1,4 +1,4 @@
-# Slider（滑动条）
+﻿# Slider（滑动条）
 
 `Slider` 继承了 `Progress` 控件属性和方法，更多可用属性和方法请参考：[Progress](Progress.md) 控件
 

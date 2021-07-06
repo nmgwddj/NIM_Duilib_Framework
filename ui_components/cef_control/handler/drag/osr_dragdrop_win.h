@@ -1,4 +1,4 @@
-// Copyright (c) 2014 The Chromium Embedded Framework Authors. All rights
+ï»¿// Copyright (c) 2014 The Chromium Embedded Framework Authors. All rights
 // reserved. Use of this source code is governed by a BSD-style license that
 // can be found in the LICENSE file.
 
@@ -75,7 +75,7 @@ class DropTargetWin : public IDropTarget {
                          POINTL cursor_position,
                          DWORD* effect);
 
-  // ÓÃshared_ptr¹ÜÀíÉúÃüÖÜÆÚ£¬²»ÓÃComPtr
+  // ç”¨shared_ptrç®¡ç†ç”Ÿå‘½å‘¨æœŸï¼Œä¸ç”¨ComPtr
   DEFAULT_QUERY_INTERFACE(IDropTarget)
   ULONG __stdcall AddRef() { return 1; }
   ULONG __stdcall Release() { return 1; }

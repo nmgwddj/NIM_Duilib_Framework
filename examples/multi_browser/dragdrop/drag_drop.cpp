@@ -1,4 +1,4 @@
-#include "drag_drop.h"
+﻿#include "drag_drop.h"
 #include <shlobj.h>
 #include <shlobj.h>
 #include <shlwapi.h>

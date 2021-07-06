@@ -1,4 +1,4 @@
-// Thread with framework(message loop)
+﻿// Thread with framework(message loop)
 
 #ifndef BASE_THREAD_FRAMEWORK_THREAD_H_
 #define BASE_THREAD_FRAMEWORK_THREAD_H_

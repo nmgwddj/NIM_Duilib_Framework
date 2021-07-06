@@ -1,4 +1,4 @@
-// a implemention of a Windows specific message pump for user interface,
+ï»¿// a implemention of a Windows specific message pump for user interface,
 // the mechanism of which is from the Google Chrome project
 
 #ifndef BASE_FRAMEWORK_WIN_UI_MESSAGE_PUMP_H_
@@ -34,7 +34,7 @@ public:
 	virtual void ScheduleWork();
 	virtual void ScheduleDelayedWork(const TimeTicks& delayed_work_time);
 
-	// Í¨ÖªMessagePumpÌáÈ¡²¢´¦ÀíÏûÏ¢¶ÓÁĞÖĞµÄWM_PAINTÏûÏ¢
+	// é€šçŸ¥MessagePumpæå–å¹¶å¤„ç†æ¶ˆæ¯é˜Ÿåˆ—ä¸­çš„WM_PAINTæ¶ˆæ¯
 	void PumpOutPendingPaintMessages();
 
 private:
@@ -51,9 +51,9 @@ private:
 	bool ProcessMessageHelper(const MSG& msg);
 	bool ProcessPumpReplacementMessage();
 
-	// ÓÃÀ´½ÓÊÕ×Ô¶¨ÒåÏûÏ¢µÄÒş²Ø´°¿Ú
+	// ç”¨æ¥æ¥æ”¶è‡ªå®šä¹‰æ¶ˆæ¯çš„éšè—çª—å£
 	HWND message_hwnd_;
-	// UIObserverÁĞ±í
+	// UIObserveråˆ—è¡¨
 	ObserverList<UIObserver> observers_;
 };
 

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "async_modal_runner.h"
 #include "base/thread/thread_manager.h"
 

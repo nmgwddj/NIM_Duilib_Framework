@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "cef_control_base.h"
 #include "cef_control/util/util.h"
 

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Progress.h"
 
 namespace ui
@@ -203,7 +203,7 @@ void Progress::PaintStatusImage(IRenderContext* pRender)
         , m_rcSrc.left, m_rcSrc.top, m_rcSrc.right, m_rcSrc.bottom);
     }
 
-		// ÈÃcornerµÄÖµ²»³¬¹ý¿É»æÖÆ·¶Î§
+		// è®©cornerçš„å€¼ä¸è¶…è¿‡å¯ç»˜åˆ¶èŒƒå›´
 		auto& corner = m_progressImage.imageAttribute.rcCorner;
 		if (IsHorizontal()) {
 			if (corner.left != 0 && corner.left >= rc.right) {

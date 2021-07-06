@@ -1,4 +1,4 @@
-# Label（文本控件）
+﻿# Label（文本控件）
 
 Label 是一个模板类，当直接使用传统控件如 Button、CheckBox 等控件时，将从 [Control](Control.md) 继承属性和方法。
 当使用包含布局属性的控件如 ButtonBox、ComboBoxBox、LabelBox 等控件时，Label 将继承 [Box](../Containers/Box.md) 的方法和属性。

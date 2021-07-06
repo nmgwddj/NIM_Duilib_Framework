@@ -1,4 +1,4 @@
-#ifndef _PUBLIC_DEFINE_H_
+﻿#ifndef _PUBLIC_DEFINE_H_
 #define _PUBLIC_DEFINE_H_
 
 namespace nim_comp {

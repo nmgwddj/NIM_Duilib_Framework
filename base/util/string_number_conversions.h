@@ -1,4 +1,4 @@
-// String number conversion
+﻿// String number conversion
 
 #ifndef BASE_UTIL_STRING_NUMBER_CONVERSIONS_H_
 #define BASE_UTIL_STRING_NUMBER_CONVERSIONS_H_

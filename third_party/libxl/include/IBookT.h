@@ -1,4 +1,4 @@
-#ifndef LIBXL_IBOOKT_H
+﻿#ifndef LIBXL_IBOOKT_H
 #define LIBXL_IBOOKT_H
 
 #include <stddef.h>

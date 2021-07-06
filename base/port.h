@@ -1,4 +1,4 @@
-// This file defines some useful macros
+﻿// This file defines some useful macros
 
 #ifndef BASE_PORT_H_
 #define BASE_PORT_H_

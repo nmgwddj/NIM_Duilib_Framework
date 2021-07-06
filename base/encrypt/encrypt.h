@@ -1,4 +1,4 @@
-// Encrypt/Decrypt Method Interface
+﻿// Encrypt/Decrypt Method Interface
 
 #ifndef  BASE_ENCRYPT_ENCRYPT_H_
 #define  BASE_ENCRYPT_ENCRYPT_H_

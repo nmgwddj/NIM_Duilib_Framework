@@ -1,4 +1,4 @@
-// Copyright (c) 2011, NetEase Inc. All rights reserved.
+ï»¿// Copyright (c) 2011, NetEase Inc. All rights reserved.
 //
 // Author: rl
 // Date: 2011/6/12
@@ -228,7 +228,7 @@ bool ReadFileToString(const PathString &filepath, std::string &out)
 		return false;
 
 	size_t file_size = (size_t)GetFileSize(filepath);
-	if (file_size > (std::numeric_limits<size_t>::max)()) //x64±àÒëÌõ¼şÏÂ£¬size_tµÄ×î´óÖµ×ªÎªint64_t»áÒç³ö£¬Òò´ËÓÃÎŞ·ûºÅ
+	if (file_size > (std::numeric_limits<size_t>::max)()) //x64ç¼–è¯‘æ¡ä»¶ä¸‹ï¼Œsize_tçš„æœ€å¤§å€¼è½¬ä¸ºint64_tä¼šæº¢å‡ºï¼Œå› æ­¤ç”¨æ— ç¬¦å·
 		return false; // Too large
 
 	bool read_ok = true;

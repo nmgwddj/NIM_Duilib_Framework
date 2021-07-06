@@ -1,4 +1,4 @@
-# Progress（进度条）
+﻿# Progress（进度条）
 
 `Progress` 继承了 `Label` 控件属性和方法，更多可用属性和方法请参考：[Label](Label.md) 控件
 

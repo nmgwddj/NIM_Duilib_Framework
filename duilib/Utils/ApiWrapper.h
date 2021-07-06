@@ -1,11 +1,11 @@
-#ifndef UI_UTILS_APIWRAPPER_H_
+Ôªø#ifndef UI_UTILS_APIWRAPPER_H_
 #define UI_UTILS_APIWRAPPER_H_
 
 #pragma once
 
 namespace ui
 {
-	// DPI  ≈‰
+	// DPIÈÄÇÈÖç
 	bool GetDpiForSystemWrapper(UINT& dpi);
 	bool GetDpiForMonitorWrapper(HMONITOR hMonitor, MONITOR_DPI_TYPE dpiType, UINT *dpiX, UINT *dpiY);
 

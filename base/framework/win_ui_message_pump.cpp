@@ -1,4 +1,4 @@
-// Copyright (c) 2011, NetEase Inc. All rights reserved.
+ï»¿// Copyright (c) 2011, NetEase Inc. All rights reserved.
 //
 // Author: wrt(guangguang)
 // Date: 2011/6/8
@@ -33,9 +33,9 @@ WinUIMessagePump::~WinUIMessagePump()
 void WinUIMessagePump::ScheduleWork()
 {
 	if (::InterlockedExchange(&have_work_, 1))
-		return;	// PumpÒÑ¾­¿ªÊ¼
+		return;	// Pumpå·²ç»å¼€å§‹
 
-	// Í¨ÖªMessagePumpÓĞĞÂÈÎÎñµ½´ï£¬Èç¹ûMessagePump´¦ÓÚË¯Ãß×´Ì¬£¬Õâ½«»½ĞÑËü
+	// é€šçŸ¥MessagePumpæœ‰æ–°ä»»åŠ¡åˆ°è¾¾ï¼Œå¦‚æœMessagePumpå¤„äºç¡çœ çŠ¶æ€ï¼Œè¿™å°†å”¤é†’å®ƒ
 	::PostMessageW(message_hwnd_, kMsgHaveWork, reinterpret_cast<WPARAM>(this), 0);
 }
 

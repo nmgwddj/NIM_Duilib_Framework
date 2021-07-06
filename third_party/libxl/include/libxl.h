@@ -1,4 +1,4 @@
-#ifndef LIBXL_CPP_H
+﻿#ifndef LIBXL_CPP_H
 #define LIBXL_CPP_H
 
 #define LIBXL_VERSION 0x03060500

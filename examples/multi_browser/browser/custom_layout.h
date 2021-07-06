@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 
 /** @class CustomLayout
-  * @brief ÓÃÓÚ»á»°´°¿ÚÖĞÈİÄÉSessionBoxµÄ×Ô¶¨ÒåTabBox£¬ÎªÁËÔÚÈÎÎñÀ¸ÏÔÊ¾ËõÂÔÍ¼ºÍÔ¤ÀÀÍ¼£¬ÖØĞ´ÁË¶Ô×Ó¿Ø¼şµÄ²¼¾ÖÂß¼­
+  * @brief ç”¨äºä¼šè¯çª—å£ä¸­å®¹çº³SessionBoxçš„è‡ªå®šä¹‰TabBoxï¼Œä¸ºäº†åœ¨ä»»åŠ¡æ æ˜¾ç¤ºç¼©ç•¥å›¾å’Œé¢„è§ˆå›¾ï¼Œé‡å†™äº†å¯¹å­æ§ä»¶çš„å¸ƒå±€é€»è¾‘
   * @copyright (c) 2016, NetEase Inc. All rights reserved
   * @author Redrain
   * @date 2019/3/20

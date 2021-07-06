@@ -1,4 +1,4 @@
-// Copyright (c) 2009 The Chromium Embedded Framework Authors. All rights
+﻿// Copyright (c) 2009 The Chromium Embedded Framework Authors. All rights
 // reserved.
 //
 // Redistribution and use in source and binary forms, with or without

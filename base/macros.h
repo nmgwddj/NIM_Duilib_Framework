@@ -1,4 +1,4 @@
-// This file defines some useful macros
+ï»¿// This file defines some useful macros
 
 #ifndef BASE_MACROS_H_
 #define BASE_MACROS_H_
@@ -11,7 +11,7 @@
 #define PTR_NULL(p)				{ assert(p); if (NULL == p) return NULL; }
 // check the pointer is null and return void
 #define PTR_VOID(p)				{ assert(p); if (NULL == p) return; }
-// check the pointer avalible£¬ if not then return false
+// check the pointer avalibleï¼Œ if not then return false
 #define PTR_FALSE(p)			{ assert(p); if (NULL == p) return false; }
 
 // delete pointer on safe mode

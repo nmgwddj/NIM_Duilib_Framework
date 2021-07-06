@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+﻿#include "StdAfx.h"
 #include "OnScreenKeyboardManager.h"
 #include <initguid.h>
 #include <shlobj.h>

@@ -1,4 +1,4 @@
-# NIM Duilib
+﻿# NIM Duilib
 
 NIM Duilib is a UI development framework for Windows, extend some new features based on the original [Duilib](https://github.com/duilib/duilib). Integrated Google base library with threads/memory/closures. You can use this framework to develop any desktop application you want.
 

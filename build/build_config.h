@@ -1,4 +1,4 @@
-// This file adds defines about the platform we're currently building on.
+﻿// This file adds defines about the platform we're currently building on.
 // Operating System:
 //     OS_WIN / OS_MACOSX / OS_IOS / OS_POSIX (MACOSX or LINUX or IOS)
 // Compiler:

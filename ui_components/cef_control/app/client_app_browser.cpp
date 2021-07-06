@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "client_app.h" 
 
 #include "include/cef_cookie.h"
@@ -18,7 +18,7 @@ void ClientApp::OnContextInitialized()
 	ASSERT(manager.get());
 	manager->SetSupportedSchemes(cookieable_schemes_, NULL);
 
-	// ÕâÀï¿ÉÒÔÉ¾³ýÁË±£´æµÄCooiesÐÅÏ¢
+	// è¿™é‡Œå¯ä»¥åˆ é™¤äº†ä¿å­˜çš„Cooiesä¿¡æ¯
 	// manager->DeleteCookies(L"", L"", nullptr);
 }
 

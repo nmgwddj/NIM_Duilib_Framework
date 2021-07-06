@@ -1,4 +1,4 @@
-#ifndef UI_CORE_RENDER_PATH_H_
+﻿#ifndef UI_CORE_RENDER_PATH_H_
 #define UI_CORE_RENDER_PATH_H_
 
 #pragma once

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "duilib/UIlib.h"
 
 namespace nim_comp {

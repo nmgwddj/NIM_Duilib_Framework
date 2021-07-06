@@ -1,4 +1,4 @@
-// Base64 encode/decode
+﻿// Base64 encode/decode
 
 #ifndef BASE_UTIL_BASE64_H_
 #define BASE_UTIL_BASE64_H_

@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "shadow_wnd.h"
 
 namespace nim_comp {

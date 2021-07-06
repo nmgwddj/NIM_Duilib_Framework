@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 
 #include "app_item.h"
 
-//ÓëappÏà¹ØµÄDb²Ù×÷
-//Õâ¸öÀà×îºÃÊÇµ¥ÊµÀıÀà
+//ä¸appç›¸å…³çš„Dbæ“ä½œ
+//è¿™ä¸ªç±»æœ€å¥½æ˜¯å•å®ä¾‹ç±»
 class CAppDb
 {
 public:

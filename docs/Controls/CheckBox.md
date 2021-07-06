@@ -1,4 +1,4 @@
-# CheckBox（复选框）
+﻿# CheckBox（复选框）
 
 `CheckBox` 控件继承了 `Button` 控件属性和方法，更多可用属性和方法请参考：[Button](Button.md) 控件
 
